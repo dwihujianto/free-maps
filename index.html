@@ -29,20 +29,27 @@
 			id: 'mapbox.streets'
 		}).addTo(mymap);
 
+		var myIcon = L.icon({
+		    iconUrl: 'jajal.svg',
+		    iconSize: [38, 95],
+		    iconAnchor: [22, 94],
+		    popupAnchor: [-3, -76],
+		    shadowUrl: 'jajal.svg',
+		    shadowSize: [68, 95],
+		    shadowAnchor: [22, 94]
+		});
+
 		L.marker([-7.024063, 110.409252], {
-			color: 'red',
-			fillColor: 'red'
-		}).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+			icon: myIcon,
+		}).addTo(mymap);
 
 		L.marker([-7.147919, 110.337343], {
-			color: 'red',
-			fillColor: 'red'
-		}).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+			title: 'red',
+		}).addTo(mymap);
 
 		L.marker([-7.195673, 110.527587], {
-			color: 'red',
-			fillColor: 'red'
-		}).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+			title: 'red',
+		}).addTo(mymap).bindPopup("I am a circle.").openPopup();
 
 		L.circle([-7.195673, 110.527587], 500, {
 			color: 'red',
